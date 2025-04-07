@@ -1,0 +1,88 @@
+*{box-sizing: border-box;}
+
+html{
+  height: 100%;
+  
+}
+
+body{
+  
+  background-image: linear-gradient(rgb(67, 66, 66), rgb(134, 134, 184));
+  margin: 5px;
+  border: 2px solid rgb(77, 77, 77);
+  width: auto;
+  height: auto;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ciudad{
+  width: 600px;
+  height: 250px;
+}
+
+.label{
+  padding-bottom: 50px;
+}
+
+.musica{
+  padding-inline-start: 50px;
+}
+
+
+header, nav, main, aside, footer{
+  justify-content: center;
+  align-items: self-start;
+}
+
+header, nav, footer{
+  width: 100%;
+}
+
+main, aside{
+  height: 100%
+}
+
+
+
+h1,h2,h3{
+  font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+  color: rgb(24, 2, 2);
+}
+main{
+  
+  height: auto;
+  width: 60%; 
+}
+
+
+
+aside{
+  border: 2px solid rgb(117, 117, 117);
+  height: auto;
+  width: 40%;
+
+}
+
+header{
+  padding-left: 30px;
+  border: 3px solid rgb(116, 116, 116);
+ 
+}
+
+nav{
+  color: black;
+  text-align: center;
+  border: 3px solid rgb(103, 102, 102);
+  height:30px
+}
+
+footer{
+  border: 3px solid rgb(120, 119, 119);
+}
