@@ -55,6 +55,12 @@ h1,h2,h3{
     font-style: normal;
   color: rgb(24, 2, 2);
 }
+
+header{
+  padding-left: 30px;
+  border: 3px solid rgb(116, 116, 116);
+}
+
 main{
   
   height: auto;
@@ -67,13 +73,6 @@ aside{
   border: 2px solid rgb(117, 117, 117);
   height: auto;
   width: 40%;
-
-}
-
-header{
-  padding-left: 30px;
-  border: 3px solid rgb(116, 116, 116);
- 
 }
 
 nav{
@@ -85,4 +84,8 @@ nav{
 
 footer{
   border: 3px solid rgb(120, 119, 119);
+}
+
+h1{
+  text-align: center;
 }
