@@ -21,16 +21,30 @@ body{
 }
 
 .ciudad{
+  border-radius: 40px;
   width: 600px;
   height: 250px;
 }
 
 .label{
   padding-bottom: 50px;
+
+text-align: end;
 }
 
 .musica{
   padding-inline-start: 50px;
+}
+
+.fotografia{
+  border-radius: 40px;
+  width: 450px;
+  height: 450px;
+}
+
+.meme{
+  padding-left: 60%;
+  padding-inline-start: 30%;
 }
 
 
@@ -89,3 +103,4 @@ footer{
 h1{
   text-align: center;
 }
+
