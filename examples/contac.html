@@ -14,39 +14,39 @@
     <link rel="stylesheet" href="../css/mi.css" />
   </head>
   <body>
-    <header><h1>Galeria</h1></header>
+    <header><h1>contacto</h1></header>
     <nav>
-      <a href="../index.html">Sobre mi</a>
+      <a href="../index.html">Atras</a>
     </nav>
 
-    <section>
-      <h1>Fotrografias e historias</h1>
+    <main>
 
-      <h3>Graduacion de mi hermano</h3>
-      <img class="fotografia" src="../assets/bro.jpg" alt="" />
+      <section class="contac">
+<h2>Registrate aqui para contactarme</h2>
+<form>
+  <label for="name">nombre</label>
+  <input type="text" id="name" required placeholder="example: chary walteros" >
 
-      <h3>Fotogra con mi familia en el año 2005</h3>
-      <img class="fotografia" src="../assets/familia.jpg" alt="" />
+  <br>
 
-      <h3>Primer viaje con mi nocia</h3>
-      <img class="fotografia" src="../assets/pareja.jpg" alt="" />
+  <label for="email">email</label>
+  <input type="email" id="email">
 
-      <h3>Pimera vez que visite el museo nacional</h3>
-      <img class="fotografia" src="../assets/museo.jpg" alt="" />
-    </section>
+  <br>
 
-    <section class="meme">
-      <h2>Registrate aqui</h2>
-      <form >
-        <label for="name">name</label>
-        <input type="text" id="name" />
-        <label for="email">email</label>
-        <input type="text" id="email" />
-        <label for="mensaje">mensaje</label>
-        <textarea id="mensaje"></textarea>
-        <button type="">enviar</button>
-      </form>
-    </section>
+  <label for="url">tu URL de git</label>
+  <input type="url" id="url">
+
+  <label for="tel">phone</label>
+  <input type="tel" id="tel" required>
+
+  <br>
+
+  <input type="submit" id="send">
+
+</form>
+      </section>
+    </main>
 
     <footer>
       <p> &copy; <span> derechos reservados</span></p>

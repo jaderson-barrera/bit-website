@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jaderson Oficial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
-      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="./assets/icono.jpeg" type="image/x-icon" />
     <link rel="stylesheet" href="./css/mi.css" />
   </head>
@@ -16,37 +18,53 @@
       <h1>SOBRE MI</h1>
     </header>
 
-    <nav>
+    <nav class="mm">
       <a
+        class="nav"
         href="https://bitinstitute.co/"
         target="_blank"
         rel="noopener noreferrer"
         >Bit</a
       >
 
-      <a href="./examples/contac.html">Galeria</a>
+      <a class="nav" href="./examples/contac.html">Contacto</a>
 
-      <a href="#footer">pie de pagina</a>
+      <a class="nav" href="#cancion">Cancion Favorita</a>
     </nav>
 
     <main>
-      <section>
+      <section class="primary">
         <h2>Hola, soy Jaderson Barrera</h2>
         <p>
           Naci el 26 de junio de año 2000 en Yopal Casanare. Años despues nos
-          muda,os para madrid cundinamarca donde vivo actualmente. En medrid curse mis cursos de primaria y secundaria en el intuto educativo departamentas serrezuela, termianado estos a la edad de 17 años. A mis 18 entre a mi primera empresa como auxiliar operario. luego de 3 años decidi retirarme para poder tener un negocio junto a mi mamdre. 
-          Nunca habia tenido claro que queria estduiar hasta este año en el cual por casualidades de la vida empece a ver algo de publicidad sobre el desarrollo web. Tome la desicion de adentarme en este nuevo mundo para poder tener nuevas oportunidades profesionales y mas estabilidad laboral
+          muda,os para madrid cundinamarca donde vivo actualmente. En medrid
+          curse mis cursos de primaria y secundaria en el intuto educativo
+          departamentas serrezuela, termianado estos a la edad de 17 años. A mis
+          18 entre a mi primera empresa como auxiliar operario. luego de 3 años
+          decidi retirarme para poder tener un negocio junto a mi mamdre. Nunca
+          habia tenido claro que queria estduiar hasta este año en el cual por
+          casualidades de la vida empece a ver algo de publicidad sobre el
+          desarrollo web. Tome la desicion de adentarme en este nuevo mundo para
+          poder tener nuevas oportunidades profesionales y mas estabilidad
+          laboral
         </p>
 
-        <h3>Yopal Casanare</h3>
-        <img class="ciudad" src="./assets/madrid b.jpg" alt="fotografia de Yopal Casanare" />
+        <h3 class="city">Yopal Casanare</h3>
+        <img
+          class="ciudad"
+          src="./assets/madrid b.jpg"
+          alt="fotografia de Yopal Casanare"
+        />
 
-        <h3>Madri cundinamarca</h3>
-        <img class="ciudad"
+        <h3 class="city">Madri cundinamarca</h3>
+        <img
+          class="ciudad"
           src="./assets/yopal b.jpg"
           alt="Fotografia de Madrid cundinamarca"
         />
+      </section>
 
+      <section class="secondary">
         <h2>Hobbies</h2>
         <ul>
           <li>Gimnasio</li>
@@ -56,7 +74,8 @@
           <li>ver peliculas</li>
         </ul>
       </section>
-      <section>
+
+      <section class="primary">
         <h2>Mi comida Favorita</h2>
         <p>
           Me gusta bastante la comida rapida, pero hay una en especial que me
@@ -121,14 +140,15 @@
           </li>
         </ol>
       </section>
-
     </main>
+    
+        <aside>
 
-    <aside class="musica">
+    <section class=" secondary">
       <h2>Mis canciones favrotias</h2>
       <table>
         <caption>
-          TOP 5
+          <h3>Top 5</h3>
         </caption>
 
         <thead>
@@ -151,14 +171,15 @@
           <td>4</td>
           <td>Mis 90´s- N Wise</td>
         </tr>
-        <tr>
+        <tr >
           <td>5</td>
           <td>The wordd is your - Nas</td>
         </tr>
       </table>
-
+    </section>
       
-      <section>
+
+      <section class="primary">
         <h2>Mis gustos Musicales</h2>
         <p>
           Mi gusto por el Rap se debe a su capacidad de expresar emociones,
@@ -178,7 +199,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="secondary">
         <h2>Mi top 10 artistas favoritos</h2>
 
         <ol>
@@ -195,9 +216,9 @@
         </ol>
       </section>
 
-      <section >
+      <section class="primary">
         <h2>Cancion favorita</h2>
-        <iframe 
+        <iframe id="cancion"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/zjBwbkHLJ60?si=Slf-m9EFShz74MXL"
@@ -209,14 +230,15 @@
         ></iframe
         >"
 
-        <audio controls src="./assets/yt1z.net - Lil Supa - 99 (Prod. Drama▲Theme) (256 KBps).mp3"></audio>
-
-      
+        <audio
+          controls
+          src="./assets/yt1z.net - Lil Supa - 99 (Prod. Drama▲Theme) (256 KBps).mp3"
+        ></audio>
       </section>
     </aside>
 
-    <footer id="footer">
-      <p> &copy; <span> derechos reservados</span></p>
+    <footer>
+      <p>&copy; <span> derechos reservados</span></p>
     </footer>
   </body>
 </html>

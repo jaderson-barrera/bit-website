@@ -1,106 +1,135 @@
-*{box-sizing: border-box;}
+/* universal */
 
-html{
-  height: 100%;
-  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  /* root */
+}
+:root {
+  --primary-color: rgb(168, 176, 169);
+  --secundary-color: rgb(205, 202, 202);
+  --he-fo: rgb(34, 33, 33);
 }
 
-body{
-  
-  background-image: linear-gradient(rgb(67, 66, 66), rgb(134, 134, 184));
-  margin: 5px;
-  border: 2px solid rgb(77, 77, 77);
-  width: auto;
-  height: auto;
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+/* calse para colores principales y padding */
+
+.primary {
+  padding: 30px;
+  background-color: var(--primary-color);
+}
+
+.secondary {
+  padding: 30px;
+  background-color: var(--secundary-color);
+}
+.nav {
+  color: black;
+  padding-left: 80px;
+}
+
+/* clases para main */
+
+.city {
+  text-align: center;
+}
+
+.ciudad {
+  border-radius: 5%;
+}
+
+/* estilos para contac */
+
+.contac {
+  background-color: var(--primary-color);
+  padding: 10%;
+}
+form {
+  background-color: var(--secundary-color);
+  padding: 20px;
+  border-radius: 50px;
+  display: grid;
+  place-items: center;
+}
+
+/* estilos */
+body {
+  margin: 30px;
+}
+
+html {
+  font-size: 62, 5%;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+}
+header {
+  color: beige;
+  background-color: var(--he-fo);
+  text-align: center;
+  padding: 15px;
+}
+
+nav {
+  color: beige;
+  background-color: var(--secundary-color);
+  text-align: start;
+  padding: 12px;
+}
+
+table {
+  width: 60%;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  color: beige;
+  background-color: var(--he-fo);
+  padding: 30px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.ciudad{
-  border-radius: 40px;
-  width: 600px;
-  height: 250px;
+/* responsive */
+
+@media screen and (min-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    background-color: brown;
+  }
 }
 
-.label{
-  padding-bottom: 50px;
-
-text-align: end;
+@media screen and (min-width: 992px) {
+  h1,
+  h2,
+  h3 {
+    background-color: blueviolet;
+  }
 }
 
-.musica{
-  padding-inline-start: 50px;
+html,
+body {
+  height: 100%;
 }
-
-.fotografia{
-  border-radius: 40px;
-  width: 450px;
-  height: 450px;
-}
-
-.meme{
-  padding-left: 60%;
-  padding-inline-start: 30%;
-}
-
-
-header, nav, main, aside, footer{
-  justify-content: center;
-  align-items: self-start;
-}
-
-header, nav, footer{
-  width: 100%;
-}
-
-main, aside{
-  height: 100%
-}
-
-
-
-h1,h2,h3{
-  font-family: "Shrikhand", serif;
-    font-weight: 400;
-    font-style: normal;
-  color: rgb(24, 2, 2);
-}
-
-header{
-  padding-left: 30px;
-  border: 3px solid rgb(116, 116, 116);
-}
-
-main{
-  
-  height: auto;
-  width: 60%; 
-}
-
-
-
-aside{
-  border: 2px solid rgb(117, 117, 117);
-  height: auto;
-  width: 40%;
-}
-
-nav{
-  color: black;
-  text-align: center;
-  border: 3px solid rgb(103, 102, 102);
-  height:30px
-}
-
-footer{
-  border: 3px solid rgb(120, 119, 119);
-}
-
-h1{
-  text-align: center;
-}
-
