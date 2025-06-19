@@ -1,3 +1,179 @@
+//TALLER CALIFICABLE
+
+let estudiantes = [
+  { nombre: "Andres", calificaciones: [50, 30, 50, 30] },
+  { nombre: "Felipe", calificaciones: [50, 30, 20, 40] },
+  { nombre: "Carmen", calificaciones: [20, 30, 30, 40] },
+  { nombre: "Oscar", calificaciones: [50, 40, 30, 50] },
+];
+
+console.log(" - Lista de los estudiantes y sus calificaciones");
+
+estudiantes.forEach((mostrarStudiantes) => {
+  console.log(mostrarStudiantes);
+});
+
+//PROMEDIO DE LOS ESTDUIANTES
+console.log(" - El promedio de los estudiantes fue");
+
+function calcularPromedio(calificaciones) {
+  let suma = calificaciones.reduce(
+    (acumular, calificacion) => acumular + calificacion,
+    0
+  );
+  let promedio = suma / calificaciones.length;
+  return promedio.toFixed(2);
+}
+
+estudiantes.forEach((mostrarStudiantes) => {
+  let promedio = calcularPromedio(mostrarStudiantes.calificaciones);
+  console.log(`${mostrarStudiantes.nombre}: promedio = ${promedio}`);
+});
+
+//MEJOR CALIFICACION
+
+function obtenerMejorCalificacion(calificaciones) {
+  return Math.max(...calificaciones);
+}
+
+//CALIFICACION MAS BAJA
+function obtenerPeorCalificacion(calificaciones) {
+  return Math.min(...calificaciones);
+}
+
+estudiantes.forEach((estudiantes) => {
+  let mejor = obtenerMejorCalificacion(estudiantes.calificaciones);
+  let peor = obtenerPeorCalificacion(estudiantes.calificaciones);
+  console.log(
+    estudiantes.nombre,
+    "mejor calificacion:",
+    mejor,
+    "peor calificacion:",
+    peor
+  );
+});
+
+//AGREGAR CALIFICACION
+
+function agregarCalificacion(nEstudiante, nCalificacion) {
+  let buscarEstudiante = estudiantes.find(
+    (estudent) => estudent.nombre === nEstudiante
+  );
+  if (buscarEstudiante) {
+    buscarEstudiante.calificaciones.push(nCalificacion);
+    console.log(
+      " - Se agrego una nueva calificacion al estudiante:",
+      nEstudiante
+    );
+  } else {
+    console.log(" - El estudiante no existe");
+  }
+}
+
+agregarCalificacion("Oscar", 10);
+console.log(estudiantes);
+
+//ELIMINAR LA ULTIMA CALIFICACION
+
+function eliminarCalificacion(nEstudiante) {
+  let buscarEstudiante = estudiantes.find(
+    (estudent) => estudent.nombre === nEstudiante
+  );
+  if (buscarEstudiante) {
+    buscarEstudiante.calificaciones.pop();
+    console.log(
+      " - Se elimino la ultima calificacion del estudiante:",
+      nEstudiante
+    );
+  } else {
+    console.log(" - El estudiante no existe");
+  }
+}
+
+eliminarCalificacion("Felipe");
+console.log(estudiantes);
+
+//FILTRAR ESTUDIANTES APROBADOS (PROEMDIO MINIMO)
+
+console.log(" - Estudiantes que aprovaron");
+
+function filtrarEstudiantesAprovados(estudiantes, minPromedio) {
+  return estudiantes.filter(
+    (student) => calcularPromedio(student.calificaciones) >= minPromedio
+  );
+}
+let minPromedio = 35;
+let aprovados = filtrarEstudiantesAprovados(estudiantes, minPromedio);
+
+console.log(
+  " - Con un promedio igual o superior a ",
+  minPromedio,
+  "fueron:",
+  aprovados
+);
+
+//ORDENAR ESTUDIANTES POR ORDEN
+
+console.log(
+  " - Se organizo la lista de estudiantes alfabeticamente por su nombre"
+);
+
+estudiantes.sort((a, b) => a.nombre.localeCompare(b.nombre));
+
+console.log(estudiantes);
+
+//GENERAR REPORTE INDIVIDUAL
+
+function generarReporteIndividual(nEstudiante) {
+  let estudiante = estudiantes.find((i) => i.nombre === nEstudiante);
+  if (estudiante) {
+    let promedio = calcularPromedio(estudiante.calificaciones);
+    let notaMayor = obtenerMejorCalificacion(estudiante.calificaciones);
+    let notaPeor = obtenerPeorCalificacion(estudiante.calificaciones);
+
+    console.log(" - Reporte general de:", nEstudiante);
+    console.log("calificaciones:", estudiante.calificaciones);
+    console.log("Promedio:", promedio);
+    console.log("Mejor calificacion:", notaMayor);
+    console.log("Mejor calificacion:", notaPeor);
+  } else {
+    console.log("Estudiante", nEstudiante, "no existe");
+  }
+}
+
+/*generarReporteIndividual("Oscar");
+
+//FUNCIONALIDAD PRINCIPAL (MENU INTERACTIVO)
+
+function iniciarGestionCalificaciones() {
+  let opciones = "";
+
+  while (opciones !== "7") {
+    opciones = Number(
+      prompt(
+        "Menú de opciones\n:" +
+          "1. Mostrar estudiantes\n" +
+          "2. Agregar calificación" +
+          "3. Eliminar última calificación\n" +
+          "4. Mostrar estudiantes aprobados\n" +
+          "5. Ordenar estudiantes por nombre\n" +
+          "6. Generar reporte individual\n" +
+          "7. Salir\n" +
+          "Ingrese el número de su opción:"
+      )
+    );
+
+
+    }
+  }
+*/
+
+
+
+
+
+
+
 
 
 /* EJERCICIO 1
@@ -12,9 +188,6 @@ Muestra por consola las variables nombre y apellido.**/
 let apellido = "Barrera"
 console.log(nombre, apellido);*/
 
-
-
-
 /* EJERCICIO 2
 
 Bien, ahora agregemos Javascript a nuestro proyecto web.
@@ -28,9 +201,6 @@ Mostrar una alerta de bienvenida a nuestra página con el nombre y el apellido d
 apellido = prompt ("Ingresa tu primer apellido:");
 alert (`Bienvenid@ ${nombre} ${apellido}`)*/
 
-
-
-
 /* EJERCICIO 3
 
 Crea 3 variables numero1,numero2 y resultado.
@@ -42,11 +212,6 @@ Muestra un alerta con el mensaje “El resultado es: (resultado)”. */
 let numero2 = Number (prompt ("ingresa el sugundo numero"));
 let resultado = numero1 + numero2
 alert (`El resultado es: ${resultado}`)*/
-
-
-
-
-
 
 /* EJERCICIO 4
 
@@ -60,15 +225,10 @@ Muestralo el resultado por consola con el mensaje “El triple de este número e
 let numeropTriple = numero * 3;
 console.log(`El triple de este numero es: ${numeropTriple}`);*/
 
-
-
-
-
 /* EJERCICIO 5
 
 
 */
-
 
 /*let coleccion =[
     {
@@ -181,142 +341,3 @@ let autorLibro = coleccion.some(function(name){
 
 console.log("Hay al menos un libro cuyo auntor sea George Orwell?", autorLibro );*/
 
-
-
-
-let estudiantes = [
-    {nombre:"Andres", calificaciones: [50, 30, 50, 30]},
-    {nombre:"Felipe", calificaciones: [50, 30, 20, 40]},
-    {nombre:"Carmen", calificaciones: [20, 30, 30, 40]},
-    {nombre:"Oscar", calificaciones: [50, 40, 30, 50]},
-]
-
- console.log(" - Lista de los estudiantes y sus calificaciones");
-
-estudiantes.forEach(mostrarStudiantes => {
-    console.log( mostrarStudiantes);
-    
-});
-
-
-//PROMEDIO DE LOS ESTDUIANTES
-console.log(" - El promedio de los estudiantes fue");
-
-
-function calcularPromedio(calificaciones){
-    let suma = calificaciones.reduce((acumular, calificacion) => acumular + calificacion, 0);
-    let promedio = suma / calificaciones.length;
-    return promedio.toFixed(2);
-};
-
-estudiantes.forEach(mostrarStudiantes =>{
-    let promedio = calcularPromedio(mostrarStudiantes.calificaciones);
-    console.log(`${mostrarStudiantes.nombre}: promedio = ${promedio}`);
-})
-
-
-//MEJOR CALIFICACION
-
-function obtenerMejorCalificacion(calificaciones) {
-	return Math.max(...calificaciones);
-}
-
-
-
-//CALIFICACION MAS BAJA
-function obtenerPeorCalificacion(calificaciones) {
-	return Math.min(...calificaciones);
-}
-
-estudiantes.forEach((estudiantes) => {
-	let mejor = obtenerMejorCalificacion(estudiantes.calificaciones);
-	let peor = obtenerPeorCalificacion(estudiantes.calificaciones);
-   console.log(estudiantes.nombre, "mejor calificacion:", mejor, "peor calificacion:", peor);
-});
-
- 
-
-//AGREGAR CALIFICACION
-
-function agregarCalificacion(nEstudiante, nCalificacion){
-    let buscarEstudiante = estudiantes.find(estudent => estudent.nombre === nEstudiante);
-    if (buscarEstudiante) {
-        buscarEstudiante.calificaciones.push(nCalificacion);
-        console.log(" - Se agrego una nueva calificacion al estudiante:", nEstudiante);
-    } else { 
-        console.log(" - El estudiante no existe");
-    }
-} 
-
-agregarCalificacion("Oscar", 10)
-console.log(estudiantes);
-
-
-//ELIMINAR LA ULTIMA CALIFICACION
-
-function eliminarCalificacion (nEstudiante){
-    let buscarEstudiante = estudiantes.find(estudent => estudent.nombre === nEstudiante);
-    if (buscarEstudiante) {
-        buscarEstudiante.calificaciones.pop()
-        console.log(" - Se elimino la ultima calificacion del estudiante:", nEstudiante);
-    } else {
-        console.log(" - El estudiante no existe");
-    }
-}
-
-eliminarCalificacion("Felipe")
-console.log(estudiantes);
-
-
-//FILTRAR ESTUDIANTES APROBADOS (PROEMDIO MINIMO)
-
-console.log(" - Estudiantes que aprovaron");
-
-function filtrarEstudiantesAprovados(estudiantes, minPromedio){
-    return estudiantes.filter(student => calcularPromedio(student.calificaciones) >= minPromedio);
-}
-let minPromedio = 35;
-let aprovados = filtrarEstudiantesAprovados (estudiantes, minPromedio)
-
-console.log(" - Con un promedio igual o superior a ", minPromedio, "fueron:", aprovados);
-
-
-
-//ORDENAR ESTUDIANTES POR ORDEN
-
-console.log(" - Se organizo la lista de estudiantes alfabeticamente por su nombre");
-
-estudiantes.sort ((a,b) => a.nombre.localeCompare (b.nombre));
-
-console.log(estudiantes);
-
-
-//GENERAR REPORTE INDIVIDUAL
-
-function generarReporteIndividual(nEstudiante) {
-	let estudiante = estudiantes.find((i) => i.nombre === nEstudiante);
-	if (estudiante) {
-		let promedio = calcularPromedio(estudiante.calificaciones);
-		let notaMayor = obtenerMejorCalificacion(estudiante.calificaciones);
-		let notaPeor = obtenerPeorCalificacion(estudiante.calificaciones);
-
-        console.log(" - Reporte general de:", nEstudiante);
-		console.log("calificaciones:", estudiante.calificaciones);
-		console.log("Promedio:", promedio);
-		console.log("Mejor calificacion:", notaMayor);
-		console.log("Mejor calificacion:", notaPeor);
-
-
-	} else { 
-        console.log("Estudiante", nEstudiante, "no existe");
-	
-	}
-}
-
-generarReporteIndividual("Oscar");
-
-
-
-//FUNCIONALIDAD PRINCIPAL (MENU INTERACTIVO)
-
-function iniciasGestionCalificaciones (){}
